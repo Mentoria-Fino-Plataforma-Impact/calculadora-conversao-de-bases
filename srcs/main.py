@@ -46,21 +46,9 @@ def exibir_menu():
 def main():
     base_origem, numero, base_destino = exibir_menu()
     
-    if (base_origem == '1'):
-        base_origem = "Binária"
-    elif (base_origem == '2'):
-        base_origem = "Decimal"
-    else:
-        base_origem = "Hexadecimal"
+    bases = {'1': "Binária", '2': "Decimal", '3': "Hexadecimal"}
         
-    if (base_destino == '1'):
-        base_destino = "Binária"
-    elif (base_destino == '2'):
-        base_destino = "Decimal"
-    else:
-        base_destino = "Hexadecimal"
-        
-    print(f"\nBase de origem.: {base_origem}\nNúmero.........: {numero}\nBase de destino: {base_destino}")
+    print(f"\nBase de origem....: {bases[base_origem]}\nNúmero............: {numero}\nBase de destino...: {bases[base_destino]}")
     
     print("\n========================================================================\n")
     
