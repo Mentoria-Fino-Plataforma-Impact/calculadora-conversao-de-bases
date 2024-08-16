@@ -1,6 +1,7 @@
 # Interação com usuário e chama as funções de conversão
 
 from validacao import validar_numero
+from conversor import *
 
 def definir_base_destino(b_origem):
     print("\nEscolha a base de destino:\n")
@@ -52,9 +53,15 @@ def exibir_menu():
 def main():
     base_origem, numero, base_destino = exibir_menu()
     
+    resultado = ""
+    
+    if (base_origem == '3' and base_destino == '1'):
+        resultado = hexadecimal_para_binario(numero)
+         
     bases = {'1': "Binária", '2': "Decimal", '3': "Hexadecimal"}
         
     print(f"\nBase de origem....: {bases[base_origem]}\nNúmero............: {numero}\nBase de destino...: {bases[base_destino]}")
+    print(f"Resultado.........: {resultado}")
     
     print("\n========================================================================\n")
     
